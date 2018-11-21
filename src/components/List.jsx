@@ -7,7 +7,6 @@ const List = ({ searchValue }) => {
 	return (
 		<ul>
 			{clients.filter(isSearched(searchValue)).map(client => {
-				//console.log(client.general.firstName.includes(searchValue));
 				if(searchValue !== '' && client.general.firstName.includes(searchValue)) {
 					return (
 						<li key={client.contact.email}>{client.general.firstName}</li>

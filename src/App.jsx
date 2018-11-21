@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchInput from './components/SearchInput';
 import List from './components/List';
 
+
 class App extends Component {
 	constructor(props) {
 			super(props);
@@ -13,7 +14,6 @@ class App extends Component {
 
 	updateSearchValue(event) {
 			this.setState({ searchValue: event.target.value});
-			//console.log(event.target.value);
 	}
 
 	render() {
@@ -21,8 +21,7 @@ class App extends Component {
 					<React.Fragment>
 							<SearchInput searchValue={this.state.searchValue} updateSearchValue={this.updateSearchValue} />
 							<List searchValue={this.state.searchValue} />
-							{/*
-							<Preview />*/}
+							{/*<Preview />*/}
 					</React.Fragment>
 			);
 	};
