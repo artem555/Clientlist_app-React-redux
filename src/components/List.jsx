@@ -1,12 +1,14 @@
 import React from 'react';
-import clients from './clients.json';
+import clients from '../assets/clients.json';
 
 const List = ({ searchValue }) => {
+	const isSearched = searchValue => item => 
+		item.general.firstName.toLowerCase().includes(searchValue.toLowerCase());
 	return (
 		<ul>
-			{clients.map(client => {
-				console.log(client.general.firstName.includes(searchValue));
-				if(client.general.firstName.includes(searchValue) && searchValue !== '') {
+			{clients.filter(isSearched(searchValue)).map(client => {
+				//console.log(client.general.firstName.includes(searchValue));
+				if(searchValue !== '' && client.general.firstName.includes(searchValue)) {
 					return (
 						<li key={client.contact.email}>{client.general.firstName}</li>
 					)
@@ -14,7 +16,7 @@ const List = ({ searchValue }) => {
 			})}
 		</ul>
 	);
-};
+};		
 
 export default List;
 
