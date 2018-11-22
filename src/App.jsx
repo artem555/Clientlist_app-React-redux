@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
-import SearchInput from './components/SearchInput';
-import List from './components/List';
+import SearchInput from './components/SearchInput/SearchInput';
+import List from './components/List/List';
+import Preview from './components/Preview/Preview';
+import './style.css';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        searchValue: ''
+      searchValue: '',
+      previewData: null
     }
-    this.updateSearchValue = this.updateSearchValue.bind(this);
   }
 
-  updateSearchValue(event) {
+  updateSearchValue = (event) => {
     this.setState({ searchValue: event.target.value});
   }
 
   render() {
     return (
-      <React.Fragment>
-        <SearchInput searchValue={this.state.searchValue} updateSearchValue={this.updateSearchValue} />
-        <List searchValue={this.state.searchValue} />
-        {/*<Preview />*/}
-      </React.Fragment>
+      <div className="main">
+        <SearchInput
+          searchValue={this.state.searchValue}
+          updateSearchValue={this.updateSearchValue}
+        />
+        <List
+          searchValue={this.state.searchValue}
+          showPreview={this.showPreview}
+        />
+      <Preview
+        previewData={this.state.previewData}
+      />
+      </div>
     );
   };
 }
