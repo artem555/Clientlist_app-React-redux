@@ -1,0 +1,25 @@
+.mainblock {
+  width: 500px;
+  background-color: aliceblue;
+  margin: 0 0 0 18px;
+}
+
+.mainblock div {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+
+h2 {
+  margin: 5px 0 5px;
+}
+
+span {
+  display: block;
+}
+
+section {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 25px;
+}

@@ -1,1 +1,49 @@
+.list {
+  width: 250px;
+  height: 400px;
+  margin: 2px 0 0 5px;
+  padding: 0;
+  overflow: auto;
+  vertical-align: top;
+  border: 1px solid grey;
+  background-color: lightgray;
+}
 
+.list li {
+  height: 50px;
+  border: 1px solid grey;
+  border-bottom: 0;
+  margin: 0;
+  list-style-type: none;
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.list li:last-child {
+  border-bottom: 1px solid grey;
+}
+
+.list li span {
+  margin: 4px 0 2px;
+}
+
+.list img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  float: left;
+}
+
+h2 {
+  margin: 5px 0 5px;
+}
+
+span {
+  display: block;
+}
+
+section {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 25px;
+}
