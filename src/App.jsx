@@ -18,6 +18,10 @@ class App extends Component {
     this.setState({ searchValue: event.target.value});
   }
 
+  showPreview = (client) => {
+    this.setState({ previewData: client });
+  }
+
   render() {
     return (
       <div className="main">
