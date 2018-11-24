@@ -10,12 +10,12 @@ class App extends Component {
     super(props);
     this.state = {
       searchValue: '',
-      previewData: null
-    }
+      previewData: null,
+    };
   }
 
   updateSearchValue = (event) => {
-    this.setState({ searchValue: event.target.value});
+    this.setState({ searchValue: event.target.value });
   }
 
   showPreview = (client) => {
@@ -23,22 +23,23 @@ class App extends Component {
   }
 
   render() {
+    const { searchValue, previewData } = this.state;
     return (
       <div className="main">
         <SearchInput
-          searchValue={this.state.searchValue}
+          searchValue={searchValue}
           updateSearchValue={this.updateSearchValue}
         />
         <List
-          searchValue={this.state.searchValue}
+          searchValue={searchValue}
           showPreview={this.showPreview}
         />
-      <Preview
-        previewData={this.state.previewData}
-      />
+        <Preview
+          previewData={previewData}
+        />
       </div>
     );
-  };
+  }
 }
 
 export default App;

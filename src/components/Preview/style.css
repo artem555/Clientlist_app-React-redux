@@ -1,13 +1,17 @@
 .mainblock {
-  width: 500px;
+  width: 465px;
   background-color: aliceblue;
-  margin: 0 0 0 18px;
+  margin: 0 0 0 25px;
 }
 
 .mainblock div {
   display: inline-block;
   vertical-align: top;
   margin: 10px;
+}
+
+.mainblock div h2:first-child {
+  margin-top: 0;
 }
 
 h2 {
