@@ -1,9 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import clients from '../../assets/clients.json';
 import './style.css';
 
-const List = ({ searchValue, showPreview }) => (
+const List = ({ clients, searchValue, onShowPreview }) => (
   <section>
     <ul className="list">
       {clients.map((client) => {
@@ -14,7 +13,7 @@ const List = ({ searchValue, showPreview }) => (
         return (
           <li
             key={client.contact.email}
-            onClick={() => showPreview(client)}
+            onClick={() => onShowPreview(client)}
             role="presentation"
           >
             <img
@@ -42,8 +41,9 @@ const List = ({ searchValue, showPreview }) => (
 );
 
 List.propTypes = {
+  clients: propTypes.string.isRequired,
   searchValue: propTypes.string.isRequired,
-  showPreview: propTypes.func.isRequired,
+  onShowPreview: propTypes.func.isRequired,
 };
 
 export default List;

@@ -2,15 +2,15 @@ import React from 'react';
 import propTypes from 'prop-types';
 import './style.css';
 
-const SearchInput = ({ searchValue, updateSearchValue }) => (
+const SearchInput = ({ searchValue, onUpdateSearchValue }) => (
   <div>
-    <input value={searchValue} onChange={updateSearchValue} />
+    <input value={searchValue} onChange={onUpdateSearchValue} />
   </div>
 );
 
 SearchInput.propTypes = {
   searchValue: propTypes.string.isRequired,
-  updateSearchValue: propTypes.func.isRequired,
+  onUpdateSearchValue: propTypes.func.isRequired,
 };
 
 export default SearchInput;

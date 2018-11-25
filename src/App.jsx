@@ -4,7 +4,6 @@ import List from './components/List/List';
 import Preview from './components/Preview/Preview';
 import './style.css';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
