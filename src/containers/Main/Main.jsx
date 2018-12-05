@@ -6,7 +6,7 @@ import Preview from '../../components/Preview/Preview';
 import './style.css';
 
 const Main = ({
-  clients, searchValue, previewData, onUpdateSearchValue, onShowPreview,
+  clients, searchValue, previewData, onUpdateSearchValue, onShowPreview, onRemoveClient,
 }) => (
   <div className="main">
     <SearchInput
@@ -17,6 +17,7 @@ const Main = ({
       clients={clients}
       searchValue={searchValue}
       onShowPreview={onShowPreview}
+      onRemoveClient={onRemoveClient}
     />
     <Preview
       previewData={previewData}
@@ -30,6 +31,7 @@ Main.propTypes = {
   previewData: propTypes.string.isRequired,
   onUpdateSearchValue: propTypes.func.isRequired,
   onShowPreview: propTypes.func.isRequired,
+  onRemoveClient: propTypes.func.isRequired,
 };
 
 export default Main;

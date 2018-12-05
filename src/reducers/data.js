@@ -21,6 +21,17 @@ export default function data(state = initialState, action) {
         previewData: action.payload.previewData,
       };
 
+    case act.REMOVE_CLIENT:
+      console.log(action);
+      return {
+        ...state,
+        clients: state.clients.filter((client) => {
+          if (client.contact.email !== action.payload.client.contact.email) {
+            return client;
+          }
+          return null;
+        }),
+      };
     default:
       return state;
   }

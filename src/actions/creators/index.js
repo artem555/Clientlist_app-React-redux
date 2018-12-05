@@ -9,3 +9,8 @@ export const showPreview = client => ({
   type: act.SHOW_PREVIEW,
   payload: { previewData: client },
 });
+
+export const removeClient = client => ({
+  type: act.REMOVE_CLIENT,
+  payload: { client },
+});

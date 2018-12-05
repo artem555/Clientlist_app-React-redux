@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Main from './Main';
-import { updateSearchValue, showPreview } from '../../actions/creators';
+import { updateSearchValue, showPreview, removeClient } from '../../actions/creators';
 
 const mapStateToProps = state => ({
   clients: state.data.clients,
@@ -12,6 +12,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => bindActionCreators({
   onUpdateSearchValue: updateSearchValue,
   onShowPreview: showPreview,
+  onRemoveClient: removeClient,
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

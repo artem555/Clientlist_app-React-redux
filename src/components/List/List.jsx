@@ -2,7 +2,9 @@ import React from 'react';
 import propTypes from 'prop-types';
 import './style.css';
 
-const List = ({ clients, searchValue, onShowPreview }) => (
+const List = ({
+  clients, searchValue, onShowPreview, onRemoveClient,
+}) => (
   <section>
     <ul className="list">
       {clients.map((client) => {
@@ -33,6 +35,11 @@ const List = ({ clients, searchValue, onShowPreview }) => (
               Job title:
               {client.job.title}
             </span>
+            <button
+              type="button"
+              key={client.contact.email}
+              onClick={() => onRemoveClient(client)}
+            />
           </li>
         );
       })}
@@ -44,6 +51,7 @@ List.propTypes = {
   clients: propTypes.string.isRequired,
   searchValue: propTypes.string.isRequired,
   onShowPreview: propTypes.func.isRequired,
+  onRemoveClient: propTypes.func.isRequired,
 };
 
 export default List;

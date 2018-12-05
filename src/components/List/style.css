@@ -10,6 +10,7 @@
 }
 
 .list li {
+  position: relative;
   height: 67px;
   border: 1px solid grey;
   border-bottom: 0;
@@ -47,4 +48,12 @@ section {
   vertical-align: top;
   display: inline-block;
   margin-right: 25px;
+}
+
+.list li button {
+  position: absolute;
+  width: 10px;
+  height: 15px;
+  left: 327px;
+  top: 10px;
 }
