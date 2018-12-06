@@ -8,7 +8,12 @@ const List = ({
   <section>
     <ul className="list">
       {clients.map((client) => {
-        if (!client.general.firstName.toLowerCase().includes(searchValue.toLowerCase())) {
+        if (
+          !client.general.firstName.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.general.lastName.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.job.title.toLowerCase().includes(searchValue.toLowerCase())
+
+        ) {
           return null;
         }
 
@@ -48,7 +53,7 @@ const List = ({
 );
 
 List.propTypes = {
-  clients: propTypes.string.isRequired,
+  clients: propTypes.instanceOf(Array).isRequired,
   searchValue: propTypes.string.isRequired,
   onShowPreview: propTypes.func.isRequired,
   onRemoveClient: propTypes.func.isRequired,

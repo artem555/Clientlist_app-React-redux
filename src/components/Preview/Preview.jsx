@@ -5,7 +5,7 @@ import './style.css';
 const Preview = ({ previewData }) => {
   if (!previewData) {
     return (
-      <div>no display result</div>
+      <div className="nodisp">No display result</div>
     );
   }
 
@@ -69,7 +69,31 @@ const Preview = ({ previewData }) => {
 };
 
 Preview.propTypes = {
-  previewData: propTypes.func.isRequired,
+  previewData: propTypes.shape({
+    general: propTypes.shape({
+      firstName: propTypes.string.isRequired,
+      lastName: propTypes.string.isRequired,
+      avatar: propTypes.string.isRequired,
+    }).isRequired,
+    job: propTypes.shape({
+      company: propTypes.string.isRequired,
+      title: propTypes.string.isRequired,
+    }).isRequired,
+    contact: propTypes.shape({
+      email: propTypes.string.isRequired,
+      phone: propTypes.string.isRequired,
+    }).isRequired,
+    address: propTypes.shape({
+      street: propTypes.string.isRequired,
+      city: propTypes.string.isRequired,
+      zipCode: propTypes.string.isRequired,
+      country: propTypes.string.isRequired,
+    }).isRequired,
+  }),
+};
+
+Preview.defaultProps = {
+  previewData: null,
 };
 
 export default Preview;

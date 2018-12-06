@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Main from './Main';
-import { updateSearchValue, showPreview, removeClient } from '../../actions/creators';
+import { showPreview, updateSearchValue, removeClient } from '../../actions/creators';
 
 const mapStateToProps = state => ({
   clients: state.data.clients,

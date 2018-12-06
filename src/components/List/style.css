@@ -57,3 +57,60 @@ section {
   left: 327px;
   top: 10px;
 }
+
+@media only screen and (max-width : 992px) {
+  .list {
+    width: 320px;
+    overflow: auto;
+  }
+
+  .list li {
+    height: 62px;
+  }
+
+  .list img {
+    padding: 6px 6px 6px;
+  }
+
+  .list li span {
+    font-size: 12px;
+  }
+
+  .list li button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .list {
+    width: 300px;
+    overflow: auto;
+  }
+
+  .list li {
+    height: 56px;
+  }
+
+  .list img {
+    width: 40px;
+    height: 40px;
+    padding: 6px 8px  8px;
+  }
+
+  .list li span {
+    font-size: 12px;
+  }
+
+  .list li button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .list {
+    width: 400px;
+    height: 200px;
+    margin: 0 0 0 8px;
+    overflow: auto;
+  }
+}

@@ -22,7 +22,6 @@ export default function data(state = initialState, action) {
       };
 
     case act.REMOVE_CLIENT:
-      console.log(action);
       return {
         ...state,
         clients: state.clients.filter((client) => {
