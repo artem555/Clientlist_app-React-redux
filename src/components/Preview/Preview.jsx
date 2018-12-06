@@ -20,20 +20,20 @@ const Preview = ({ previewData }) => {
       </div>
       <div>
         <h2>General</h2>
-        <span>
+        <span className="general">
           Firstname:
           {previewData.general.firstName}
         </span>
-        <span>
+        <span className="general">
           Lastname:
           {previewData.general.lastName}
         </span>
         <h2>Job</h2>
-        <span>
+        <span className="job">
           Company:
           {previewData.job.company}
         </span>
-        <span>
+        <span className="job">
           Title:
           {previewData.job.title}
         </span>

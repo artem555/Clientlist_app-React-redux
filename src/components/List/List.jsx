@@ -12,6 +12,13 @@ const List = ({
           !client.general.firstName.toLowerCase().includes(searchValue.toLowerCase())
           && !client.general.lastName.toLowerCase().includes(searchValue.toLowerCase())
           && !client.job.title.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.job.company.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.contact.email.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.contact.phone.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.address.street.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.address.city.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.address.zipCode.toLowerCase().includes(searchValue.toLowerCase())
+          && !client.address.country.toLowerCase().includes(searchValue.toLowerCase())
 
         ) {
           return null;
