@@ -5,7 +5,7 @@ import './style.css';
 const List = ({
   clients, searchValue, onShowPreview, onRemoveClient,
 }) => (
-  <section>
+  <section className="listblock">
     <ul className="list">
       {clients.map((client) => {
         if (

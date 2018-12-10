@@ -1,7 +1,7 @@
 .mainblock {
-  width: 516px;
+  width: 55%;
   background-color: aliceblue;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .mainblock div {
@@ -48,7 +48,8 @@ section {
 
 @media only screen and (max-width : 992px) {
   .mainblock {
-    width: 483px;
+    width: 53%;
+    margin: 0 0 0 31px;
   }
 
   .general {
@@ -75,12 +76,22 @@ section {
 
 @media only screen and (max-width : 768px) {
   .mainblock {
-    width: 340px;
-    margin-left: 6px;
+    width: 50%;
+    height: 501px;
+    margin: 0 auto;
   }
 
   .mainblock div {
     margin: 10px 10px 0 10px;
+  }
+
+  .mainblock div {
+    display: block;
+  }
+
+  div img {
+    width: 90px;
+    height: 90px;
   }
 
   section {
@@ -97,9 +108,14 @@ section {
 
 @media only screen and (max-width : 480px) {
   .mainblock {
-    width: 400px;
-    height: 281px;
-    margin: 10px 0 9px 9px;
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+    margin: 7px 0 9px 9px;
+  }
+
+  .mainblock div {
+    display: inline-block;
   }
 
   div img {
@@ -130,5 +146,21 @@ section {
     position: static;
     margin: 10px;
     font-size: 20px;
+  }
+}
+
+@media only screen and (max-width : 360px) {
+  .mainblock {
+    width: 94%;
+    margin: 6px 0 0 9px;
+  }
+
+  div img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .mainblock div {
+    display: block;
   }
 }

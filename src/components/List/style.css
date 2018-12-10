@@ -1,5 +1,8 @@
+.listblock {
+  width: 40%;
+}
+
 .list {
-  width: 370px;
   height: 500px;
   margin: 0 0 0 5px;
   padding: 0;
@@ -59,9 +62,8 @@ section {
 }
 
 @media only screen and (max-width : 992px) {
-  .list {
-    width: 320px;
-    overflow: auto;
+  .listblock {
+    width: 38%;
   }
 
   .list li {
@@ -82,8 +84,13 @@ section {
 }
 
 @media only screen and (max-width : 768px) {
+  .listblock {
+    width: 48%;
+  }
+
   .list {
-    width: 300px;
+    width: auto;
+    margin: 0 0 0 5px;
   }
 
   .list li {
@@ -106,10 +113,24 @@ section {
 }
 
 @media only screen and (max-width : 480px) {
-  .list {
-    width: 400px;
-    height: 200px;
+  .listblock {
+    width: 96%;
     margin: 0 0 0 8px;
-    overflow: auto;
+  }
+
+  .list {
+    width: auto;
+    height: 206px;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width : 360px) {
+  .listblock {
+    width: 95%;
+  }
+
+  .list {
+    height: 109px;
   }
 }
