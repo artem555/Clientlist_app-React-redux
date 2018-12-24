@@ -6,16 +6,15 @@ import Preview from '../../components/Preview/Preview';
 import './style.css';
 
 const Main = ({
-  clients, searchValue, previewData, onUpdateSearchValue, onShowPreview, onRemoveClient,
+  isFetching, clients, previewData, onGetSearchableValue, onShowPreview, onRemoveClient,
 }) => (
   <div className="main">
     <SearchInput
-      searchValue={searchValue}
-      onUpdateSearchValue={onUpdateSearchValue}
+      onGetSearchableValue={onGetSearchableValue}
     />
     <List
+      isFetching={isFetching}
       clients={clients}
-      searchValue={searchValue}
       onShowPreview={onShowPreview}
       onRemoveClient={onRemoveClient}
     />
@@ -27,7 +26,6 @@ const Main = ({
 
 Main.propTypes = {
   clients: propTypes.instanceOf(Array).isRequired,
-  searchValue: propTypes.string.isRequired,
   previewData: propTypes.shape({
     general: propTypes.shape({
       firstName: propTypes.string.isRequired,
@@ -49,7 +47,8 @@ Main.propTypes = {
       country: propTypes.string.isRequired,
     }).isRequired,
   }),
-  onUpdateSearchValue: propTypes.func.isRequired,
+  isFetching: propTypes.bool.isRequired,
+  onGetSearchableValue: propTypes.func.isRequired,
   onShowPreview: propTypes.func.isRequired,
   onRemoveClient: propTypes.func.isRequired,
 };

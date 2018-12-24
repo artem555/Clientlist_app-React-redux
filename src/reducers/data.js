@@ -1,20 +1,13 @@
 import * as act from '../actions/types';
-import clients from '../assets/clients.json';
 
 const initialState = {
-  clients,
-  searchValue: '',
+  clients: [],
   previewData: null,
+  isFetching: false,
 };
 
 export default function data(state = initialState, action) {
   switch (action.type) {
-    case act.UPDATE_SEARCH_VALUE:
-      return {
-        ...state,
-        searchValue: action.payload.searchValue,
-      };
-
     case act.SHOW_PREVIEW:
       return {
         ...state,
@@ -31,6 +24,20 @@ export default function data(state = initialState, action) {
           return null;
         }),
       };
+
+    case act.UPDATE_CLIENTS_LIST:
+      return {
+        ...state,
+        clients: action.payload.clients,
+        isFetching: false,
+      };
+
+    case act.LOAD_REQUEST:
+      return {
+        ...state,
+        isFetching: true,
+      };
+
     default:
       return state;
   }

@@ -6,8 +6,22 @@ input {
   border: 2px solid orange;
 }
 
+@media only screen and (max-width : 768px) {
+  input {
+    width: 35%;
+  }
+}
+
 @media only screen and (max-width : 480px) {
   input {
+    width: 62%;
+    margin: 5px 0 5px 8px;
+  }
+}
+
+@media only screen and (max-width : 360px) {
+  input {
+    width: 91%;
     margin: 5px 0 5px 8px;
   }
 }

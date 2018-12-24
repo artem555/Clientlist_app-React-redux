@@ -31,8 +31,10 @@ section {
 
 .nodisp {
   position: absolute;
-  left: 600px;
-  top: 100px;
+  width: 60%;
+  right: 60px;
+  top: 40%;
+  text-align: center;
   font-size: 25px;
 }
 
@@ -64,8 +66,10 @@ section {
 
   .nodisp {
     position: absolute;
-    left: 430px;
-    top: 100px;
+    width: 60%;
+    right: 60px;
+    top: 40%;
+    text-align: center;
     font-size: 25px;
   }
 
@@ -100,8 +104,10 @@ section {
 
   .nodisp {
     position: absolute;
-    left: 360px;
-    top: 100px;
+    width: 35%;
+    right: 60px;
+    top: 40%;
+    text-align: center;
     font-size: 25px;
   }
 }
@@ -109,9 +115,10 @@ section {
 @media only screen and (max-width : 480px) {
   .mainblock {
     width: 96%;
-    height: auto;
+    height: 276px;
     margin: 0 auto;
     margin: 7px 0 9px 9px;
+    overflow: auto;
   }
 
   .mainblock div {
@@ -144,6 +151,7 @@ section {
 
   .nodisp {
     position: static;
+    width: 45%;
     margin: 10px;
     font-size: 20px;
   }
@@ -152,7 +160,9 @@ section {
 @media only screen and (max-width : 360px) {
   .mainblock {
     width: 94%;
+    height: 281px;
     margin: 6px 0 0 9px;
+    overflow: auto;
   }
 
   div img {
@@ -162,5 +172,9 @@ section {
 
   .mainblock div {
     display: block;
+  }
+
+  .nodisp {
+    width: 45%;
   }
 }
